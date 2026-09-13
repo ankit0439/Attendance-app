@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>AJU Attendance — Diploma EEE</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">AJ</div>
+        <div>
+          <div class="brand-title">AJU Attendance</div>
+          <div class="brand-subtitle">Diploma EEE · 3rd Semester</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+        <button class="nav-item" data-view="today">✓ <span>Mark Attendance</span></button>
+        <button class="nav-item" data-view="calendar">▦ <span>Calendar</span></button>
+        <button class="nav-item" data-view="subjects">◫ <span>Subjects</span></button>
+        <button class="nav-item" data-view="timetable">◷ <span>Timetable</span></button>
+        <button class="nav-item" data-view="backup">↥ <span>Backup & Data</span></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="mini-card">
+          <span class="dot"></span>
+          <div>
+            <strong>Offline ready</strong>
+            <small>Your data stays in this browser.</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">ARKA JAIN UNIVERSITY</div>
+          <h1 id="pageTitle">Attendance Dashboard</h1>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" id="quickBackup" title="Download backup">↥</button>
+          <button class="profile-pill" id="groupPill">Group D1</button>
+        </div>
+      </header>
+
+      <section id="dashboardView" class="view active"></section>
+      <section id="todayView" class="view"></section>
+      <section id="calendarView" class="view"></section>
+      <section id="subjectsView" class="view"></section>
+      <section id="timetableView" class="view"></section>
+      <section id="backupView" class="view"></section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <div id="modalRoot"></div>
+  <script src="app.js"></script>
+</body>
+</html>
